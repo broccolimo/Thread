@@ -1,0 +1,7 @@
+多个线程同时向账户内存1块钱
+结果一般为1
+
+解决方法为同步
+1. 在Account类中对save方法添加synchronized修饰符
+2. 在AddMoney类中的run方法中，对account进行同步 加synchronized块
+3. 在Account类中使用锁
